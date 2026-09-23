@@ -49,6 +49,9 @@ a { color: var(--steel); text-decoration: none; }
 
 /* Header */
 .site-header { border-bottom: 1px solid var(--line); }
+.logo { display: inline-flex; align-items: center; }
+.logo img { height: 36px; width: auto; display: block; }
+.footer-logo { height: 32px; width: auto; display: block; margin-bottom: 14px; }
 .header-inner {
   display: flex;
   align-items: center;
@@ -149,5 +152,6 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
   .services { grid-template-columns: 1fr; }
   .hero h1 { font-size: 30px; }
   .header-inner nav { gap: 16px; }
+  .logo img { height: 28px; }
   .rol { grid-template-columns: 1fr; gap: 4px; }
 }
