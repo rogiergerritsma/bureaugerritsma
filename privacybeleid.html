@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5S9DLW367"></script>
+  <!-- Google Analytics: laadt pas na toestemming (zie assets/cookies.js) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-P5S9DLW367');
+    var GA_ID = 'G-P5S9DLW367';
+    var KEUZE_SLEUTEL = 'bg_cookiekeuze';
+    window.gaGeladen = false;
+    function laadAnalytics(){
+      if (window.gaGeladen) return; window.gaGeladen = true;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
+    }
+    try { if (localStorage.getItem(KEUZE_SLEUTEL) === 'ja') laadAnalytics(); } catch (e) {}
   </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacybeleid — Bureau Gerritsma</title>
+<title>Privacyverklaring — Bureau Gerritsma</title>
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -35,34 +44,55 @@
 </header>
 
 <section class="legal">
-  <h1>Privacybeleid</h1>
+  <h1>Privacyverklaring</h1>
+  <p>In deze verklaring leest u welke persoonsgegevens wij verwerken, waarom, en welke rechten u heeft.</p>
 
-  <h2>Wie is verantwoordelijk</h2>
-  <p>Bureau Gerritsma, gevestigd te Kerkstraat 18, 1391 HC Abcoude, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit privacybeleid.</p>
-
-  <h2>Welke gegevens worden verwerkt</h2>
+  <h2>1. Wie zijn wij</h2>
+  <p>Bureau Gerritsma is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze verklaring.</p>
   <ul>
-    <li>Naam en contactgegevens die worden achtergelaten via e-mail of contactformulier</li>
-    <li>Gegevens die tijdens een gesprek of traject worden gedeeld</li>
+    <li>Bureau Gerritsma, Kerkstraat 18, 1391 HC Abcoude</li>
+    <li>KvK 42161754</li>
+    <li>E-mail: <a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a></li>
   </ul>
 
-  <h2>Doel van de verwerking</h2>
-  <p>Gegevens worden gebruikt om contact op te nemen naar aanleiding van een aanvraag, en om eventuele opdrachten uit te voeren.</p>
+  <h2>2. Welke gegevens wij verwerken en waarom</h2>
+  <p><strong>Contact en opdrachten.</strong> Neemt u contact met ons op, dan verwerken wij uw naam, contactgegevens en de inhoud van uw bericht. Wij gebruiken die om uw vraag te beantwoorden. Krijgen wij een opdracht, dan verwerken wij ook de gegevens die nodig zijn om die uit te voeren en te factureren. Dat doen wij op basis van de (voorgenomen) overeenkomst en onze wettelijke administratieplicht.</p>
+  <p><strong>Opdrachtgevers en referenties.</strong> Wij noemen een opdrachtgever of een referentie alleen op deze site of in een voorstel als die daar vooraf toestemming voor heeft gegeven.</p>
+  <p><strong>Websitebezoek.</strong> Alleen als u daar toestemming voor geeft, meten wij met Google Analytics hoe bezoekers deze site gebruiken: welke pagina's worden bekeken, hoe lang, en via welke route bezoekers binnenkomen. Wij gebruiken die informatie om de site te verbeteren. Google Signals en het delen van gegevens voor advertenties staan uit. Geeft u geen toestemming, dan wordt Google Analytics niet geladen.</p>
 
-  <h2>Bewaartermijn</h2>
-  <p>Gegevens worden niet langer bewaard dan noodzakelijk voor het doel waarvoor ze zijn verzameld, of zolang de wet dit vereist.</p>
+  <h2>3. Met wie wij gegevens delen</h2>
+  <p>Wij verkopen geen gegevens. Wij delen gegevens alleen als dat nodig is voor de uitvoering van een opdracht, als de wet dat verplicht, of met dienstverleners die voor ons werken:</p>
+  <ul>
+    <li>onze hostingpartner, voor het hosten van deze website en onze e-mail;</li>
+    <li>Google, voor Google Analytics (alleen na uw toestemming) en voor de lettertypen op deze site (Google Fonts).</li>
+  </ul>
+  <p>Bij het laden van de lettertypen via Google Fonts gaat uw IP-adres naar Google. Google is gevestigd in de Verenigde Staten en neemt deel aan het EU-US Data Privacy Framework, waardoor doorgifte naar de VS is toegestaan.</p>
 
-  <h2>Delen met derden</h2>
-  <p>Gegevens worden niet gedeeld met derden, tenzij dit noodzakelijk is voor de uitvoering van een opdracht of wettelijk verplicht is.</p>
+  <h2>4. Hoe lang wij gegevens bewaren</h2>
+  <ul>
+    <li>Contactberichten zonder opdracht: maximaal 2 jaar na het laatste contact.</li>
+    <li>Opdracht- en factuurgegevens: 7 jaar, vanwege de fiscale bewaarplicht.</li>
+    <li>Gegevens in Google Analytics: maximaal 14 maanden.</li>
+  </ul>
 
-  <h2>Rechten</h2>
-  <p>Iedereen heeft het recht om zijn of haar gegevens in te zien, te corrigeren of te laten verwijderen. Een verzoek daartoe kan worden gestuurd naar info@bureaugerritsma.nl.</p>
+  <h2 id="cookies">5. Cookies</h2>
+  <p>Deze site plaatst zonder uw toestemming geen cookies. Kiest u in de cookiebalk voor "Prima", dan plaatst Google Analytics de cookies <code>_ga</code> en <code>_ga_*</code>. Die onderscheiden bezoekers van elkaar en blijven maximaal 2 jaar bewaard.</p>
+  <p>Uw keuze bewaren wij in de lokale opslag van uw browser (<code>bg_cookiekeuze</code>), niet in een cookie. U kunt uw keuze altijd wijzigen via "Cookie-instellingen" onderaan elke pagina, of hier wissen. Daarna vragen wij het opnieuw.</p>
+  <p><button type="button" class="btn-wis" onclick="wisCookiekeuze()">Mijn cookiekeuze wissen</button></p>
 
-  <h2>Contact</h2>
-  <p>Vragen over dit privacybeleid kunnen worden gestuurd naar info@bureaugerritsma.nl.</p>
+  <h2>6. Uw rechten</h2>
+  <p>U heeft het recht om uw gegevens in te zien, te laten corrigeren of te laten verwijderen. U kunt ook bezwaar maken tegen de verwerking, de verwerking laten beperken, of uw gegevens laten overdragen. Gegeven toestemming kunt u altijd intrekken. Stuur uw verzoek naar <a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a>. Wij reageren binnen 4 weken.</p>
+  <p>Bent u het niet eens met hoe wij met uw gegevens omgaan, dan kunt u een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
+
+  <h2>7. Beveiliging</h2>
+  <p>Wij nemen passende maatregelen om uw gegevens te beschermen tegen verlies en onbevoegde toegang. De site werkt via een versleutelde verbinding (https). Accounts waarin wij gegevens bewaren, zijn beveiligd met sterke wachtwoorden en, waar mogelijk, tweestapsverificatie.</p>
+
+  <h2>8. Wijzigingen</h2>
+  <p>Wij kunnen deze verklaring aanpassen. De meest recente versie staat altijd op deze pagina.</p>
+  <p class="versie">Versie 1 oktober 2026</p>
 </section>
 
-<footer>
+<footer data-locatie="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
@@ -82,7 +112,8 @@
         <ul>
           <li><a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a></li>
           <li><a href="https://www.linkedin.com/in/gerritsma/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="privacybeleid.html">Privacybeleid</a></li>
+          <li><a href="privacybeleid.html">Privacyverklaring</a></li>
+          <li><a href="#" data-cookie-instellingen>Cookie-instellingen</a></li>
         </ul>
       </div>
     </div>
@@ -90,5 +121,6 @@
   </div>
 </footer>
 
+<script src="assets/cookies.js" defer></script>
 </body>
 </html>

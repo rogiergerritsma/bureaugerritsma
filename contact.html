@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5S9DLW367"></script>
+  <!-- Google Analytics: laadt pas na toestemming (zie assets/cookies.js) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-P5S9DLW367');
+    var GA_ID = 'G-P5S9DLW367';
+    var KEUZE_SLEUTEL = 'bg_cookiekeuze';
+    window.gaGeladen = false;
+    function laadAnalytics(){
+      if (window.gaGeladen) return; window.gaGeladen = true;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
+    }
+    try { if (localStorage.getItem(KEUZE_SLEUTEL) === 'ja') laadAnalytics(); } catch (e) {}
   </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +51,7 @@
 
 <section class="contact-page">
   <div class="wrap contact-grid">
-    <div class="contact-card">
+    <div class="contact-card" data-locatie="contact">
       <h3>Direct contact</h3>
       <ul>
         <li><a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a></li>
@@ -61,7 +69,7 @@
   </div>
 </section>
 
-<footer>
+<footer data-locatie="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
@@ -81,7 +89,8 @@
         <ul>
           <li><a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a></li>
           <li><a href="https://www.linkedin.com/in/gerritsma/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="privacybeleid.html">Privacybeleid</a></li>
+          <li><a href="privacybeleid.html">Privacyverklaring</a></li>
+          <li><a href="#" data-cookie-instellingen>Cookie-instellingen</a></li>
         </ul>
       </div>
     </div>
@@ -89,5 +98,6 @@
   </div>
 </footer>
 
+<script src="assets/cookies.js" defer></script>
 </body>
 </html>
