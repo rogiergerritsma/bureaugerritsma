@@ -27,19 +27,21 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=20261020d">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Bureau Gerritsma" width="173" height="36"></a>
-    <nav>
+    <nav id="hoofdmenu" aria-label="Hoofdmenu">
       <a href="index.html" class="active">Home</a>
+      <a href="ai-ontwikkelstraat.html">AI-ontwikkelstraat</a>
       <a href="diensten.html">Diensten</a>
       <a href="over.html">Over</a>
-      <a href="contact.html" class="btn btn-outline">Contact</a>
     </nav>
+    <a href="contact.html" class="btn btn-outline header-contact">Contact</a>
+    <button type="button" class="menu-knop" aria-controls="hoofdmenu" aria-expanded="false" aria-label="Menu openen"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -49,7 +51,7 @@
       <h1>Interim transformation leadership voor vastgoed en digitalisering.</h1>
       <p class="lead">Bureau Gerritsma helpt besturen van organisaties op het snijvlak van vastgoed, technologie en verandering grip te krijgen op strategie, data en organisatie.</p>
       <div class="hero-actions">
-        <a href="diensten.html" class="btn btn-primary">Plan een gesprek</a>
+        <a href="contact.html" class="btn btn-primary">Plan een gesprek</a>
         <a href="diensten.html" class="btn btn-outline">Bekijk diensten</a>
       </div>
     </div>
@@ -64,6 +66,10 @@
     <h2>Waarvoor u Bureau Gerritsma inhuurt</h2>
     <div class="services">
       <div class="service">
+        <h3><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></h3>
+        <p>Van AI gebruiken naar AI regisseren in softwareontwikkeling: één werkwijze, review naar risico en governance die vastlegt wie waar tekent.</p>
+      </div>
+      <div class="service">
         <h3>Interim Transformation Leadership</h3>
         <p>Eindverantwoordelijke rol bij complexe veranderopgaven: de opgave scherp maken, bestuur en uitvoering verbinden, en structuur brengen in de realisatie.</p>
       </div>
@@ -74,10 +80,6 @@
       <div class="service">
         <h3>Vastgoedtransformatie &amp; Digitalisering</h3>
         <p>Vastgoeddata, digitale processen en platforms, en de organisatieverandering die nodig is om daarmee te werken.</p>
-      </div>
-      <div class="service">
-        <h3><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></h3>
-        <p>Van AI gebruiken naar AI regisseren in softwareontwikkeling: één werkwijze, review naar risico en governance die vastlegt wie waar tekent.</p>
       </div>
     </div>
   </div>
@@ -116,10 +118,10 @@
       <div>
         <h4>Diensten</h4>
         <ul>
+          <li><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></li>
           <li><a href="diensten.html#leadership">Interim Transformation Leadership</a></li>
           <li><a href="diensten.html#strategie">IT- en Digitaliseringsstrategie</a></li>
           <li><a href="diensten.html#vastgoed">Vastgoedtransformatie &amp; Digitalisering</a></li>
-          <li><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></li>
         </ul>
       </div>
       <div>
@@ -137,5 +139,6 @@
 </footer>
 
 <script src="assets/cookies.js" defer></script>
+<script src="assets/menu.js" defer></script>
 </body>
 </html>

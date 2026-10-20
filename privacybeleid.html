@@ -27,19 +27,21 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=20261020d">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Bureau Gerritsma" width="173" height="36"></a>
-    <nav>
+    <nav id="hoofdmenu" aria-label="Hoofdmenu">
       <a href="index.html">Home</a>
+      <a href="ai-ontwikkelstraat.html">AI-ontwikkelstraat</a>
       <a href="diensten.html">Diensten</a>
       <a href="over.html">Over</a>
-      <a href="contact.html" class="btn btn-outline">Contact</a>
     </nav>
+    <a href="contact.html" class="btn btn-outline header-contact">Contact</a>
+    <button type="button" class="menu-knop" aria-controls="hoofdmenu" aria-expanded="false" aria-label="Menu openen"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -102,10 +104,10 @@
       <div>
         <h4>Diensten</h4>
         <ul>
+          <li><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></li>
           <li><a href="diensten.html#leadership">Interim Transformation Leadership</a></li>
           <li><a href="diensten.html#strategie">IT- en Digitaliseringsstrategie</a></li>
           <li><a href="diensten.html#vastgoed">Vastgoedtransformatie &amp; Digitalisering</a></li>
-          <li><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></li>
         </ul>
       </div>
       <div>
@@ -123,5 +125,6 @@
 </footer>
 
 <script src="assets/cookies.js" defer></script>
+<script src="assets/menu.js" defer></script>
 </body>
 </html>
