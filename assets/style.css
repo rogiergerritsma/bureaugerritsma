@@ -84,9 +84,10 @@ a { color: var(--steel); text-decoration: none; }
 /* Diensten */
 .diensten { padding: 88px 0; }
 .diensten h2 { font-size: 28px; max-width: 20ch; margin-bottom: 48px; }
-.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 56px; }
 .service h3 { font-size: 18px; margin-bottom: 10px; padding-bottom: 14px; border-bottom: 2px solid var(--steel); }
 .service p { font-size: 15px; margin: 0; }
+.service h3 a { color: inherit; }
 
 .dienst-detail { padding: 56px 0; border-bottom: 1px solid var(--line); }
 .dienst-detail:last-of-type { border-bottom: none; }
@@ -155,6 +156,49 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
   .logo img { height: 28px; }
   .rol { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* AI-native ontwikkelstraat */
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); margin-bottom: 14px !important; }
+.straat-sectie { padding: 72px 0; }
+.straat-alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.straat-sectie h2 { font-size: 26px; margin-bottom: 12px; }
+.straat-sectie .intro { font-size: 16px; max-width: 62ch; margin-bottom: 32px; }
+.straat-sectie .bron { font-size: 13.5px; margin: 20px 0 0; }
+.gat-legenda { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); margin-bottom: 18px; }
+.gat-legenda .sw { display: inline-block; width: 18px; height: 18px; border-radius: 3px; }
+.gat-legenda .sw-gat { margin-left: 14px; }
+.sw-vol { background: var(--steel); }
+.sw-gat, .gat-balk { background: repeating-linear-gradient(135deg, var(--steel-tint) 0 7px, #C9D7E3 7px 14px); }
+.gat { display: grid; gap: 14px; }
+.gat-rij { display: grid; grid-template-columns: 220px 1fr 300px; gap: 24px; align-items: center; }
+.gat-label { font-size: 15px; color: var(--ink); }
+.gat-label strong { font-family: 'Source Serif 4', serif; font-size: 22px; margin-right: 6px; }
+.gat-balk { height: 34px; border-radius: 4px; overflow: hidden; }
+.gat-balk span { display: block; height: 100%; background: var(--steel); }
+.gat-oplossing { font-size: 15px; color: var(--slate); border-left: 3px solid var(--ink); padding-left: 14px; }
+.gat-oplossing strong { color: var(--ink); }
+.stappen { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.stappen li { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--steel); padding: 20px; }
+.stappen .nr { font-family: 'Source Serif 4', serif; font-weight: 700; color: var(--steel); font-size: 20px; }
+.stappen h3 { font-size: 17px; margin: 8px 0; }
+.stappen p { font-size: 14.5px; margin: 0; }
+.kern { font-family: 'Source Serif 4', serif; font-size: 20px; color: var(--ink); margin: 28px 0 0; }
+.klassen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.klasse { border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; }
+.klasse h3 { font-size: 19px; margin-bottom: 10px; }
+.klasse p { font-size: 15px; }
+.klasse .gevolg { color: var(--ink); font-weight: 600; }
+.klasse .tekenen { margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-weight: 600; color: var(--steel); }
+.klasse-c { border-color: var(--ink); border-width: 2px; }
+.ritme { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ritme li { font-size: 15px; color: var(--slate); background: var(--white); border: 1px solid var(--line); padding: 22px; }
+.ritme strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 8px; }
+@media (max-width: 900px) {
+  .stappen { grid-template-columns: 1fr 1fr; }
+  .gat-rij { grid-template-columns: 1fr; gap: 8px; }
+  .klassen, .ritme { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .stappen { grid-template-columns: 1fr; } }
 
 /* Cookiebalk — Merkfamilie v1.1, hoofdstuk 4 */
 .cookiebalk {

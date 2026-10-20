@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- Google Analytics: laadt pas na toestemming (zie assets/cookies.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var GA_ID = 'G-P5S9DLW367';
+    var KEUZE_SLEUTEL = 'bg_cookiekeuze';
+    window.gaGeladen = false;
+    function laadAnalytics(){
+      if (window.gaGeladen) return; window.gaGeladen = true;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
+    }
+    try { if (localStorage.getItem(KEUZE_SLEUTEL) === 'ja') laadAnalytics(); } catch (e) {}
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-native ontwikkelstraat — Bureau Gerritsma</title>
+<meta name="description" content="Bureau Gerritsma richt AI-native softwareontwikkeling in met regie: één werkwijze, review naar risico en governance die vastlegt wie waar tekent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Bureau Gerritsma" width="173" height="36"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html" class="active">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html" class="btn btn-outline">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">Expertise · AI-native ontwikkelstraat</p>
+    <h1>Van AI gebruiken naar AI regisseren in softwareontwikkeling.</h1>
+    <p>Bijna elk ontwikkelteam gebruikt AI. Bijna niemand heeft vastgelegd hoe, door wie en onder welk toezicht. Bureau Gerritsma richt een ontwikkelstraat in waarin mensen beslissen, AI-agents het werk uitvoeren en elke wijziging terug te voeren is op een besluit.</p>
+  </div>
+</section>
+
+<section class="straat-sectie">
+  <div class="wrap">
+    <h2>Waar zit het gat?</h2>
+    <p class="intro">84% van de Nederlandse organisaties gebruikt AI bij softwareontwikkeling. Elke balk loopt tot die 84%. Het gevulde deel is hoe ver organisaties zijn; het gearceerde deel is het gat.</p>
+    <div class="gat-legenda"><span class="sw sw-vol"></span>Zo ver zijn ze <span class="sw sw-gat"></span>Het gat</div>
+    <div class="gat">
+      <div class="gat-rij">
+        <div class="gat-label"><strong>34%</strong> gebruik is standaard</div>
+        <div class="gat-balk"><span style="width:40.5%"></span></div>
+        <div class="gat-oplossing"><strong>Eén werkwijze:</strong> spec, rollen en een vaste flow</div>
+      </div>
+      <div class="gat-rij">
+        <div class="gat-label"><strong>31%</strong> actief toezicht op agents</div>
+        <div class="gat-balk"><span style="width:36.9%"></span></div>
+        <div class="gat-oplossing"><strong>Review naar risico</strong> en een auditlog van agents</div>
+      </div>
+      <div class="gat-rij">
+        <div class="gat-label"><strong>16%</strong> AI in het hele proces</div>
+        <div class="gat-balk"><span style="width:19%"></span></div>
+        <div class="gat-oplossing"><strong>De hele flow:</strong> van spec tot test, acceptatie en live</div>
+      </div>
+      <div class="gat-rij">
+        <div class="gat-label"><strong>8%</strong> governance vastgelegd</div>
+        <div class="gat-balk"><span style="width:9.5%"></span></div>
+        <div class="gat-oplossing"><strong>Wie tekent waar,</strong> vastgelegd in Jira en de repository</div>
+      </div>
+    </div>
+    <p class="bron">Bron: Info Support, onderzoek onder 330 Nederlandse IT-beslissers (via Techzine, augustus 2026).</p>
+  </div>
+</section>
+
+<section class="straat-sectie straat-alt">
+  <div class="wrap">
+    <h2>Hoe de straat werkt</h2>
+    <p class="intro">Geen sprints van twee weken, maar een doorlopende stroom met vaste momenten waarop mensen beslissen.</p>
+    <ol class="stappen">
+      <li><span class="nr">01</span><h3>Beschrijven</h3><p>De product owner werkt samen met AI een idee uit tot specificaties met acceptatiecriteria.</p></li>
+      <li><span class="nr">02</span><h3>Afspreken</h3><p>De product owner keurt het wat, de CTO het hoe. De spec is het contract.</p></li>
+      <li><span class="nr">03</span><h3>Bouwen</h3><p>AI-agents bouwen per issue code en tests, aangestuurd door een engineer.</p></li>
+      <li><span class="nr">04</span><h3>Controleren</h3><p>Tests, security-scan, een review-agent en menselijke review naar risico.</p></li>
+      <li><span class="nr">05</span><h3>Accepteren</h3><p>Op werkende software. Elke fout wordt een nieuwe regel voor de straat.</p></li>
+    </ol>
+    <p class="kern">Mensen tekenen, agents voeren uit.</p>
+  </div>
+</section>
+
+<section class="straat-sectie">
+  <div class="wrap">
+    <h2>Review naar risico: A · B · C</h2>
+    <p class="intro">De vraag bij elke wijziging: wat gebeurt er als dit misgaat? Daarop bepaalt u hoeveel menselijke aandacht een wijziging krijgt.</p>
+    <div class="klassen">
+      <div class="klasse">
+        <h3>A · Laag</h3>
+        <p class="gevolg">Gaat het mis, dan ziet iets er even raar uit.</p>
+        <p>Bijvoorbeeld een tekst op een pagina of een extra veld in een intern formulier. Automatische controles en de review-agent, de product owner keurt goed.</p>
+        <p class="tekenen">1 mens tekent</p>
+      </div>
+      <div class="klasse">
+        <h3>B · Midden</h3>
+        <p class="gevolg">Gaat het mis, dan werkt een proces verkeerd.</p>
+        <p>Bijvoorbeeld een berekening, een koppeling of een databasewijziging. Daarbovenop leest de CTO zelf de code en de tests.</p>
+        <p class="tekenen">2 mensen tekenen</p>
+      </div>
+      <div class="klasse klasse-c">
+        <h3>C · Hoog</h3>
+        <p class="gevolg">Gaat het mis, dan komen veiligheid, geld of privacy in gevaar.</p>
+        <p>Bijvoorbeeld inloggen en rechten, betalingen of persoonsgegevens. Daarbovenop een tweede deskundige en vooraf een plan om terug te draaien.</p>
+        <p class="tekenen">3 mensen tekenen</p>
+      </div>
+    </div>
+    <p class="bron">AI stelt de klasse voor, de CTO bevestigt. Bij twijfel altijd een klasse hoger.</p>
+  </div>
+</section>
+
+<section class="straat-sectie straat-alt">
+  <div class="wrap">
+    <h2>Governance die u kunt laten zien</h2>
+    <p class="intro">Voor elke stap is vastgelegd wie tekent en waar het staat. Zo is achteraf altijd te zien wie besloot, wat de AI deed en wie het goedkeurde.</p>
+    <ul class="ritme">
+      <li><strong>Wekelijks</strong>Demo: wat staat live, voortgang per epic, wat wacht op een besluit.</li>
+      <li><strong>Maandelijks</strong>Governance-review: doorlooptijd, fouten in productie, AI-kosten tegen budget, open klasse-C-wijzigingen.</li>
+      <li><strong>Per kwartaal</strong>Koers: roadmap, AI-beleid en leveranciers, AI-geletterdheid van het team (AI Act).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="dienst-detail">
+  <div class="wrap">
+    <h2>Wat Bureau Gerritsma doet</h2>
+    <p>Voor organisaties die zelf software ontwikkelen of laten ontwikkelen, en voor het mkb dat voor de keuze staat: een eigen AI-straat inrichten of een ontwikkelpartij inhuren.</p>
+    <ul>
+      <li>Keuzeadvies: eigen straat, ontwikkelpartij of een combinatie</li>
+      <li>De straat inrichten: werkwijze, rollen, tooling en de flow van spec tot live</li>
+      <li>De CTO/CISO-rol invullen of begeleiden: architectuur, security en review naar risico</li>
+      <li>Governance en voortgang zichtbaar maken in Jira, met een auditlog van AI-gebruik</li>
+      <li>Een pilot op één product of team, daarna opschalen</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Wilt u weten waar uw organisatie staat?</h2>
+    <p>In één gesprek brengen we in kaart hoe AI nu wordt gebruikt en waar het gat zit.</p>
+    <a href="contact.html" class="btn btn-primary">Plan een gesprek</a>
+  </div>
+</section>
+
+<footer data-locatie="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo.svg" alt="Bureau Gerritsma" class="footer-logo" width="154" height="32">
+        <p style="margin:0; font-size:14.5px;">Interim Transformation Leadership voor organisaties op het snijvlak van vastgoed, technologie en verandering.</p>
+      </div>
+      <div>
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="diensten.html#leadership">Interim Transformation Leadership</a></li>
+          <li><a href="diensten.html#strategie">IT- en Digitaliseringsstrategie</a></li>
+          <li><a href="diensten.html#vastgoed">Vastgoedtransformatie &amp; Digitalisering</a></li>
+          <li><a href="ai-ontwikkelstraat.html">AI-native ontwikkelstraat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@bureaugerritsma.nl">info@bureaugerritsma.nl</a></li>
+          <li><a href="https://www.linkedin.com/in/gerritsma/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="privacybeleid.html">Privacyverklaring</a></li>
+          <li><a href="#" data-cookie-instellingen>Cookie-instellingen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Bureau Gerritsma</div>
+  </div>
+</footer>
+
+<script src="assets/cookies.js" defer></script>
+</body>
+</html>
