@@ -26,7 +26,7 @@ De site draait op Plesk (bureaugerritsma.nl). Plesk haalt de code op uit deze re
 **Cache:** bij een wijziging in `assets/style.css` het versienummer in de link verhogen (`style.css?v=JJJJMMDDx`) op alle pagina's, anders tonen browsers de oude opmaak.
 
 ## Bestanden (aanvulling)
-- `ai-ontwikkelstraat.html` — expertisepagina AI-native ontwikkelstraat
+- `ai-ontwikkelstraat.html` — expertisepagina Paraaf (AI-native ontwikkelstraat)
 - `assets/menu.js` — hamburgermenu op mobiel
 - `assets/cookies.js` — cookiebalk en Google Analytics na toestemming
 
