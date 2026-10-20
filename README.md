@@ -1,6 +1,6 @@
 # Bureau Gerritsma — statische site
 
-Vijf platte HTML-pagina's, geen build-stap, geen CMS. Werkt direct op GitHub Pages.
+Zes platte HTML-pagina's, geen build-stap, geen CMS. Gehost op Plesk, gedeployed vanuit deze repo.
 
 ## Bestanden
 - `index.html` — home
@@ -11,19 +11,24 @@ Vijf platte HTML-pagina's, geen build-stap, geen CMS. Werkt direct op GitHub Pag
 - `assets/style.css` — alle styling
 - `assets/rogier-foto.png` — portretfoto
 
-## Live zetten via GitHub Pages
+## Live zetten (Plesk)
 
-1. Maak een nieuwe (of gebruik een bestaande) GitHub-repository, bijvoorbeeld `bureau-gerritsma-site`.
-2. Upload deze bestanden naar de root van die repository (via de GitHub-website: "Add file" → "Upload files", of via git).
-3. Ga naar **Settings → Pages** in de repository.
-4. Zet bij "Source" de branch op `main` en de map op `/ (root)`.
-5. Na een minuut of twee staat de site live op `https://<jouw-github-gebruikersnaam>.github.io/<repository-naam>/`.
+De site draait op Plesk (bureaugerritsma.nl). Plesk haalt de code op uit deze repo (`main`).
 
-## Eigen domein koppelen (bureaugerritsma.nl)
+**Handmatig:** Plesk → bureaugerritsma.nl → Git → **Pull updates** (en **Deploy** als deployment op handmatig staat).
 
-1. In dezelfde Settings → Pages, vul bij "Custom domain" `bureaugerritsma.nl` in.
-2. Zet bij je domeinregistrar (waar bureaugerritsma.nl nu draait) de DNS-records zoals GitHub aangeeft (meestal een aantal A-records naar GitHub's IP-adressen, plus een CNAME voor `www`).
-3. Wacht tot de DNS is doorgevoerd (kan tot 24 uur duren) en vink in GitHub "Enforce HTTPS" aan zodra dat kan.
+**Automatisch via webhook:** Plesk heeft een webhook-URL die een pull + deploy start.
+- De URL staat in Plesk → bureaugerritsma.nl → Git (de webhook-link van de repository).
+- **De URL staat bewust niet in deze repo:** de repo is publiek en met de URL kan iedereen een deploy starten.
+- Instellen in GitHub: Settings → Webhooks → Add webhook → Payload URL = de Plesk-URL, Content type `application/json`, event "Just the push event".
+- Daarna gaat elke push naar `main` vanzelf live.
+
+**Cache:** bij een wijziging in `assets/style.css` het versienummer in de link verhogen (`style.css?v=JJJJMMDDx`) op alle pagina's, anders tonen browsers de oude opmaak.
+
+## Bestanden (aanvulling)
+- `ai-ontwikkelstraat.html` — expertisepagina AI-native ontwikkelstraat
+- `assets/menu.js` — hamburgermenu op mobiel
+- `assets/cookies.js` — cookiebalk en Google Analytics na toestemming
 
 ## Nog in te vullen
 - Telefoonnummer, adres en KvK-nummer op de contactpagina (nu `[placeholders]`).
