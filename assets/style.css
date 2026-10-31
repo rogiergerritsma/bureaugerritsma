@@ -242,3 +242,13 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
 }
 .legal .btn-wis:hover { background: var(--steel-tint); }
 .legal .versie { font-size: 13.5px; color: var(--slate); margin-top: 40px; }
+
+/* Product gebouwd met Paraaf (LegendMatch) */
+.product-sectie { padding: 64px 0; border-top: 1px solid var(--line); }
+.product-sectie h2 { font-size: 24px; margin-bottom: 20px; }
+.product { display: flex; gap: 24px; align-items: flex-start; max-width: 780px; padding: 28px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.product img { width: 72px; height: 72px; flex: none; }
+.product h3 { font-size: 20px; margin-bottom: 6px; }
+.product p { font-size: 15.5px; margin: 0 0 14px; }
+.product .product-noot { font-size: 14px; }
+@media (max-width: 600px) { .product { flex-direction: column; align-items: flex-start; padding: 22px; } }
