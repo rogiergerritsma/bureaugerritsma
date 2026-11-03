@@ -2,31 +2,15 @@
 <html lang="nl">
 <head>
   <!-- Google Analytics: laadt pas na toestemming (zie assets/cookies.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    var GA_ID = 'G-P5S9DLW367';
-    var KEUZE_SLEUTEL = 'bg_cookiekeuze';
-    window.gaGeladen = false;
-    function laadAnalytics(){
-      if (window.gaGeladen) return; window.gaGeladen = true;
-      var s = document.createElement('script'); s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
-    }
-    try { if (localStorage.getItem(KEUZE_SLEUTEL) === 'ja') laadAnalytics(); } catch (e) {}
-  </script>
+  <script src="assets/analytics.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Over Rogier Gerritsma — Bureau Gerritsma</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css?v=20261103a">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261031a">
+<link rel="stylesheet" href="assets/style.css?v=20261103a">
 </head>
 <body>
 
@@ -51,7 +35,7 @@
   </div>
 </section>
 
-<section class="over" style="background:var(--white);">
+<section class="over over-wit">
   <div class="wrap over-grid">
     <div>
       <p>Rogier Gerritsma is interim transformation leader met ruim 24 jaar ervaring in technologie en digitale organisaties. Hij was CIO, bestuurder, interim-leider, ondernemer en consultant — een combinatie die hem ervaring geeft met strategie en governance, maar ook met productontwikkeling, technologie, bedrijfsvoering en de praktische uitvoering van verandering.</p>
@@ -125,7 +109,7 @@
     <div class="footer-grid">
       <div>
         <img src="assets/logo.svg" alt="Bureau Gerritsma" class="footer-logo" width="154" height="32">
-        <p style="margin:0; font-size:14.5px;">Interim Transformation Leadership voor organisaties op het snijvlak van vastgoed, technologie en verandering.</p>
+        <p class="footer-intro">Interim Transformation Leadership voor organisaties op het snijvlak van vastgoed, technologie en verandering.</p>
       </div>
       <div>
         <h4>Diensten</h4>

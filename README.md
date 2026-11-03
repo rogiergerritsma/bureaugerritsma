@@ -29,6 +29,14 @@ De site draait op Plesk (bureaugerritsma.nl). Plesk haalt de code op uit deze re
 - `ai-ontwikkelstraat.html` — expertisepagina Paraaf (AI-native ontwikkelstraat)
 - `assets/menu.js` — hamburgermenu op mobiel
 - `assets/cookies.js` — cookiebalk en Google Analytics na toestemming
+- `assets/analytics.js` — laadt Google Analytics pas na toestemming (was inline script)
+- `assets/fonts.css` + `assets/fonts/` — zelf gehoste lettertypen Inter en Source Serif 4 (geen Google Fonts meer)
+- `.htaccess` — security headers (CSP, HSTS, X-Frame-Options e.d.)
+
+## Security headers (.htaccess)
+De Content-Security-Policy staat alleen scripts, stijlen en fonts van de eigen site toe (plus Google Analytics na toestemming). Daarom:
+- **geen inline `<script>`, geen `onclick=` en geen `style=`-attributen** in de HTML; zet JavaScript in `assets/*.js` en opmaak in `assets/style.css`;
+- een nieuwe externe dienst (bijv. een formulierdienst of embed) moet eerst in de CSP in `.htaccess` worden toegevoegd.
 
 ## Nog in te vullen
 - Telefoonnummer, adres en KvK-nummer op de contactpagina (nu `[placeholders]`).

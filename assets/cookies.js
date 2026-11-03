@@ -60,6 +60,9 @@
     var inst = e.target.closest('[data-cookie-instellingen]');
     if (inst) { e.preventDefault(); toonBalk(); return; }
 
+    // Wis-knop op de privacyverklaring (was een inline onclick; nu zonder inline script i.v.m. CSP)
+    if (e.target.closest('[data-wis-cookiekeuze]')) { window.wisCookiekeuze(); return; }
+
     // Conversie-events (alleen als Analytics na toestemming geladen is)
     var a = e.target.closest('a[href]');
     if (!a || !window.gaGeladen || typeof window.gtag !== 'function') return;

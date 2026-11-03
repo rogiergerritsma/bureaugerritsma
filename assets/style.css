@@ -252,3 +252,11 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
 .product p { font-size: 15.5px; margin: 0 0 14px; }
 .product .product-noot { font-size: 14px; }
 @media (max-width: 600px) { .product { flex-direction: column; align-items: flex-start; padding: 22px; } }
+
+/* Former inline style attributes (moved here so the CSP can use style-src 'self') */
+.footer-grid p.footer-intro { margin: 0; font-size: 14.5px; }
+.over.over-wit { background: var(--white); }
+.gat-balk span.gat-40-5 { width: 40.5%; }
+.gat-balk span.gat-36-9 { width: 36.9%; }
+.gat-balk span.gat-19 { width: 19%; }
+.gat-balk span.gat-9-5 { width: 9.5%; }

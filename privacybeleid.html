@@ -2,32 +2,16 @@
 <html lang="nl">
 <head>
   <!-- Google Analytics: laadt pas na toestemming (zie assets/cookies.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    var GA_ID = 'G-P5S9DLW367';
-    var KEUZE_SLEUTEL = 'bg_cookiekeuze';
-    window.gaGeladen = false;
-    function laadAnalytics(){
-      if (window.gaGeladen) return; window.gaGeladen = true;
-      var s = document.createElement('script'); s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', GA_ID, {allow_google_signals:false, allow_ad_personalization_signals:false});
-    }
-    try { if (localStorage.getItem(KEUZE_SLEUTEL) === 'ja') laadAnalytics(); } catch (e) {}
-  </script>
+  <script src="assets/analytics.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacyverklaring — Bureau Gerritsma</title>
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css?v=20261103a">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=20261031a">
+<link rel="stylesheet" href="assets/style.css?v=20261103a">
 </head>
 <body>
 
@@ -80,7 +64,7 @@
   <h2 id="cookies">5. Cookies</h2>
   <p>Deze site plaatst zonder uw toestemming geen cookies. Kiest u in de cookiebalk voor "Prima", dan plaatst Google Analytics de cookies <code>_ga</code> en <code>_ga_*</code>. Die onderscheiden bezoekers van elkaar en blijven maximaal 2 jaar bewaard.</p>
   <p>Uw keuze bewaren wij in de lokale opslag van uw browser (<code>bg_cookiekeuze</code>), niet in een cookie. U kunt uw keuze altijd wijzigen via "Cookie-instellingen" onderaan elke pagina, of hier wissen. Daarna vragen wij het opnieuw.</p>
-  <p><button type="button" class="btn-wis" onclick="wisCookiekeuze()">Mijn cookiekeuze wissen</button></p>
+  <p><button type="button" class="btn-wis" data-wis-cookiekeuze>Mijn cookiekeuze wissen</button></p>
 
   <h2>6. Uw rechten</h2>
   <p>U heeft het recht om uw gegevens in te zien, te laten corrigeren of te laten verwijderen. U kunt ook bezwaar maken tegen de verwerking, de verwerking laten beperken, of uw gegevens laten overdragen. Gegeven toestemming kunt u altijd intrekken. Stuur uw verzoek naar <a href="mailto:mail@bureaugerritsma.nl">mail@bureaugerritsma.nl</a>. Wij reageren binnen 4 weken.</p>
@@ -99,7 +83,7 @@
     <div class="footer-grid">
       <div>
         <img src="assets/logo.svg" alt="Bureau Gerritsma" class="footer-logo" width="154" height="32">
-        <p style="margin:0; font-size:14.5px;">Interim Transformation Leadership voor organisaties op het snijvlak van vastgoed, technologie en verandering.</p>
+        <p class="footer-intro">Interim Transformation Leadership voor organisaties op het snijvlak van vastgoed, technologie en verandering.</p>
       </div>
       <div>
         <h4>Diensten</h4>
