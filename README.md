@@ -1,6 +1,6 @@
 # Bureau Gerritsma — statische site
 
-Zes platte HTML-pagina's, geen build-stap, geen CMS. Gehost op Plesk, gedeployed vanuit deze repo.
+Zes platte HTML-pagina's, geen build-stap, geen CMS. Gehost op GitHub Pages vanuit deze repo.
 
 ## Bestanden
 - `index.html` — home
@@ -11,17 +11,13 @@ Zes platte HTML-pagina's, geen build-stap, geen CMS. Gehost op Plesk, gedeployed
 - `assets/style.css` — alle styling
 - `assets/rogier-foto.png` — portretfoto
 
-## Live zetten (Plesk)
+## Live zetten (GitHub Pages)
 
-De site draait op Plesk (bureaugerritsma.nl). Plesk haalt de code op uit deze repo (`main`).
-
-**Handmatig:** Plesk → bureaugerritsma.nl → Git → **Pull updates** (en **Deploy** als deployment op handmatig staat).
-
-**Automatisch via webhook:** Plesk heeft een webhook-URL die een pull + deploy start.
-- De URL staat in Plesk → bureaugerritsma.nl → Git (de webhook-link van de repository).
-- **De URL staat bewust niet in deze repo:** de repo is publiek en met de URL kan iedereen een deploy starten.
-- Instellen in GitHub: Settings → Webhooks → Add webhook → Payload URL = de Plesk-URL, Content type `application/json`, event "Just the push event".
-- Daarna gaat elke push naar `main` vanzelf live.
+Vanaf november 2026 draait de site op **GitHub Pages** (gratis, statisch). Plesk is niet meer nodig.
+- GitHub: Settings → Pages → Source `main`, map `/ (root)`, custom domain `bureaugerritsma.nl`, **Enforce HTTPS** aan.
+- `CNAME` (met `bureaugerritsma.nl`) en `.nojekyll` laten staan.
+- Elke push naar `main` gaat vanzelf live.
+- DNS: vier A-records naar GitHub Pages en `www` als CNAME naar `rogiergerritsma.github.io`. MX-, SPF- en DKIM-records voor iCloud-mail nooit weghalen.
 
 **Cache:** bij een wijziging in `assets/style.css` het versienummer in de link verhogen (`style.css?v=JJJJMMDDx`) op alle pagina's, anders tonen browsers de oude opmaak.
 
@@ -31,12 +27,15 @@ De site draait op Plesk (bureaugerritsma.nl). Plesk haalt de code op uit deze re
 - `assets/cookies.js` — cookiebalk en Google Analytics na toestemming
 - `assets/analytics.js` — laadt Google Analytics pas na toestemming (was inline script)
 - `assets/fonts.css` + `assets/fonts/` — zelf gehoste lettertypen Inter en Source Serif 4 (geen Google Fonts meer)
-- `.htaccess` — security headers (CSP, HSTS, X-Frame-Options e.d.)
+- `.htaccess` — security headers voor de oude Plesk-hosting; mag weg zodra de site op GitHub Pages draait
 
-## Security headers (.htaccess)
-De Content-Security-Policy staat alleen scripts, stijlen en fonts van de eigen site toe (plus Google Analytics na toestemming). Daarom:
+## Security headers
+GitHub Pages kan geen eigen headers sturen. Daarom staat de Content-Security-Policy als `<meta>`-tag in de `<head>` van **elke pagina** (zelfde tekst overal). Die staat alleen scripts, stijlen en fonts van de eigen site toe (plus Google Analytics na toestemming). Daarom:
 - **geen inline `<script>`, geen `onclick=` en geen `style=`-attributen** in de HTML; zet JavaScript in `assets/*.js` en opmaak in `assets/style.css`;
-- een nieuwe externe dienst (bijv. een formulierdienst of embed) moet eerst in de CSP in `.htaccess` worden toegevoegd.
+- een nieuwe externe dienst (bijv. een formulierdienst of embed) moet eerst in de CSP-meta van alle pagina's worden toegevoegd;
+- een nieuwe pagina krijgt dezelfde twee meta-tags (CSP en referrer) als de bestaande.
+
+HSTS en bescherming tegen inbedden (clickjacking) kunnen op GitHub Pages niet; daarvoor is een proxy zoals Cloudflare nodig.
 
 ## Nog in te vullen
 - Telefoonnummer, adres en KvK-nummer op de contactpagina (nu `[placeholders]`).
