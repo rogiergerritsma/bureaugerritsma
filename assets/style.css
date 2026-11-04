@@ -288,3 +288,5 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
 .rol ul { margin: 10px 0 0; padding-left: 18px; color: var(--slate); font-size: 15px; }
 .rol li { margin-bottom: 4px; }
 .loopbaan.opleiding { padding-top: 0; }
+.tegel-grond { background: #1C1A17; border-color: #1C1A17; }
+.tegel-papier { background: #F7F4EE; border-color: #E6E0D4; }
