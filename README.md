@@ -24,6 +24,7 @@ Vanaf november 2026 draait de site op **GitHub Pages** (gratis, statisch). Plesk
 ## Bestanden (aanvulling)
 - `ai-ontwikkelstraat.html` — expertisepagina Paraaf (AI-native ontwikkelstraat)
 - `assets/menu.js` — hamburgermenu op mobiel
+- `assets/thema.js` — donker thema: volgt de systeeminstelling, themaknop legt keuze vast in localStorage (`bg_thema`); `assets/logo-op-donker.svg` is het logo voor donkere achtergrond
 - `assets/cookies.js` — cookiebalk en Google Analytics na toestemming
 - `assets/analytics.js` — laadt Google Analytics pas na toestemming (was inline script)
 - `assets/fonts.css` + `assets/fonts/` — zelf gehoste lettertypen Inter en Source Serif 4 (geen Google Fonts meer)
