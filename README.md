@@ -9,7 +9,7 @@ Zes platte HTML-pagina's, geen build-stap, geen CMS. Gehost op GitHub Pages vanu
 - `contact.html` — contact
 - `privacybeleid.html` — **conceptversie, nog te laten checken door een jurist**
 - `assets/style.css` — alle styling
-- `assets/rogier-foto.png` — portretfoto
+- `assets/rogier-foto.png` — portretfoto (origineel); de site gebruikt `rogier-foto-340/480/700.webp`. Nieuwe foto: maak die drie WebP-formaten opnieuw.
 
 ## Live zetten (GitHub Pages)
 
