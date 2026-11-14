@@ -42,3 +42,8 @@ HSTS en bescherming tegen inbedden (clickjacking) kunnen op GitHub Pages niet; d
 - Telefoonnummer, adres en KvK-nummer op de contactpagina (nu `[placeholders]`).
 - Privacybeleid laten toetsen.
 - Contactformulier: deze site is puur statisch, dus een echt formulier heeft een externe dienst nodig (bijv. Formspree of Getform) — nu staat er alleen een mailto-link.
+
+## Vindbaarheid (SEO)
+- `robots.txt` en `sitemap.xml` staan in de root. Nieuwe pagina: voeg hem toe aan `sitemap.xml` en geef hem een `<link rel="canonical">`, een meta description en de og-tags, net als de bestaande pagina's.
+- Gestructureerde gegevens (JSON-LD: Bureau Gerritsma, Rogier, website) staan alleen in `index.html`. Een `application/ld+json`-blok is data en geen script; de CSP blokkeert het niet.
+- `google0c303f700d1e8b78.html` is de Search Console-verificatie. **Niet verwijderen**, anders vervalt de verificatie.
