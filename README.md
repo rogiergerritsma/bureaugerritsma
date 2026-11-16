@@ -47,3 +47,5 @@ HSTS en bescherming tegen inbedden (clickjacking) kunnen op GitHub Pages niet; d
 - `robots.txt` en `sitemap.xml` staan in de root. Nieuwe pagina: voeg hem toe aan `sitemap.xml` en geef hem een `<link rel="canonical">`, een meta description en de og-tags, net als de bestaande pagina's.
 - Gestructureerde gegevens (JSON-LD: Bureau Gerritsma, Rogier, website) staan alleen in `index.html`. Een `application/ld+json`-blok is data en geen script; de CSP blokkeert het niet.
 - `google0c303f700d1e8b78.html` is de Search Console-verificatie. **Niet verwijderen**, anders vervalt de verificatie.
+- Oude WordPress-adressen (`/contact/`, `/over-ons/`, `/over-ons-2/`, `/missie/`, `/home/`, `/privacybeleid/`) sturen via een kleine doorstuurpagina (meta refresh + canonical) door naar de nieuwe pagina. GitHub Pages kent geen echte redirects.
+- Interne links naar de homepage wijzen naar `/`, niet naar `index.html`, zodat Google geen dubbele homepage ziet.
