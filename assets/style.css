@@ -542,5 +542,5 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding: 5
 .vragen details p { margin: 0 0 16px; font-size: 15px; }
 .straat-sectie .bron a { color: var(--steel); }
 
-.over-foto img { background: var(--steel-tint); border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 12%; max-width: 220px; box-shadow: 0 0 0 6px var(--white), 0 0 0 7px var(--line); }
+.over-foto img { background: var(--steel-tint); border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; max-width: 220px; box-shadow: 0 0 0 6px var(--white), 0 0 0 7px var(--line); }
 @media (max-width: 780px) { .over-foto img { max-width: 160px; } }
